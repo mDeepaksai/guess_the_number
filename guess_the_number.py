@@ -18,12 +18,18 @@ def guess():
         attempts += 1
 
         if user_input == number:
+            score = total_attempts - attempts + 1
+            print(f"YOUR SCORE IS: {score}")
             print(f"YOUR GUESS IS CORRECT! You guessed it in {attempts} attempts.")
             break
         elif user_input > number:
             print("YOUR GUESS IS TOO HIGH\n")
         else:
             print("YOUR GUESS IS TOO LOW\n")
+
+        # ✅ Show remaining attempts after each guess
+        remaining_attempts = total_attempts - attempts
+        print(f"You have {remaining_attempts} attempts left.\n")
 
     if user_input != number:
         print(f"YOU LOSE! The correct number was {number}.")
