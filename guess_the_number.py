@@ -27,7 +27,6 @@ def guess():
         else:
             print("YOUR GUESS IS TOO LOW\n")
 
-        # ✅ Show remaining attempts after each guess
         remaining_attempts = total_attempts - attempts
         print(f"You have {remaining_attempts} attempts left.\n")
 
